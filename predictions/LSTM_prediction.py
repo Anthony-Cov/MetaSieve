@@ -18,7 +18,6 @@ def seconds_to_str(seconds):
     hh, mm = divmod(mm, 60)
     return "%02d:%02d:%02d" % (hh, mm, ss)
 
-'''Линейное укладывание в диапазон [0,1], возвращает коэффициенты для восстановления (max(X))!=0'''
 def Norm01(x):
     mi=np.nanmin(x)
     ma=np.nanmax(np.array(x)-mi)
@@ -93,6 +92,6 @@ df=pd.read_csv(datafile)
 print(datafile, 'loaded: %i series'%(len(df.columns)-1))
 
 '''Collect quality metrics'''
-result = data_meta_learning_equal_meaniter(df, metric=metric, levels = 5)
-result.to_csv(datafile[:-4]+'LSTM_RMSE.csv', index=False)
-print(datafile[:-4]+'LSTM_RMSE.csv saved.')
+result = data_meta_learning_equal_meaniter(df, metric=metric, levels = 15)
+result.to_csv(datafile[:-4]+'LSTM_acc_time.csv', index=False)
+print(datafile[:-4]+'LSTM_acc_time.csv saved.')

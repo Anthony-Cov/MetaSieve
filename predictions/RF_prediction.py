@@ -40,7 +40,7 @@ datafile='data500.csv'
 df=pd.read_csv(datafile)
 print(datafile, 'loaded: %i series'%(len(df.columns)-1))
 
-levels=5
+levels=15
 result=pd.DataFrame(columns=['level', 'time']+list(df.columns[1:]))
 result['level']=np.arange(levels)
 
@@ -54,5 +54,5 @@ for level in range(levels):
         result.loc[level, colname] = smape
     result.loc[level, 'time'] = time()-start_time
     print('')
-result.to_csv('data500RF_acc_time.csv', index=False)
+result.to_csv('art1000_XGB_acc_time.csv', index=False)
 

@@ -15,7 +15,7 @@ def rndwalk(n): # random walk
     y=(y-min(y))/(max(y)-min(y)) # scale to [0..1]
     return y
 
-''' По всем параметрам :) '''
+''' All parameters '''
 i=0
 n=500
 amt=1000
@@ -26,6 +26,6 @@ for gamma in np.linspace(0,1,amt//4): # all combinations
         i+=1 
         y=(1-gamma)*period(n)+gamma*rndwalk(n)
         ser=pd.DataFrame({'t':np.arange(n), 'val':y}) 
-        '''Можно собрать в одну таблицу'''
+        
         dataset=pd.merge(dataset, pd.DataFrame({'t':np.arange(n), str(i-1).zfill(3):y}), on='t', how='inner')
 print('%i artificial series created'%i)
