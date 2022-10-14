@@ -3,7 +3,7 @@
 
 
 Implementation of _MetaSieve_ algorithm.
-(For "MetaSieve: Quality vs. Complexity Sieve for Meta-Learningon Time Series Data" (KDD 2022))
+(For "<i>MetaSieve</i>: Performance vs. Complexity Sieve for Time Series Forecasting" <a href=https://qizhiquan.github.io/ICDM-Workshop/OEDM-22/index.html>(OEDM workshop of the IEEE International Conference on Data Mining (ICDM'22).</a>
 
 
 
